@@ -1,0 +1,6 @@
+#!/bin/bash
+tmux kill-server 2> /dev/null
+tmux new-session -d -s Coding -n Neovim 'nvim'
+tmux new-window -t Coding -n Shell
+tmux new-session -d -s Terminal -n Shell
+tmux attach -t Coding
